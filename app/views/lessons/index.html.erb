@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lessons</h1>
+
+<ul class="collapsible" data-collapsible="accordion">
+    <% @lessons.each do |lesson| %>
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">library_books</i>
+            <%= link_to lesson.title, lesson %>
+            <span class="right">
+                <%= link_to edit_lesson_path(lesson) do %>
+                <i class="material-icons">mode_edit</i><% end %>
+                <%=link_to lesson, method: :delete, data: { confirm: 'Are you sure?'} do %>
+                <i class="material-icons">delete</i><% end %>
+            </span>
+        </div>
+        <div class="collapsible-body">
+            <p><%= lesson.description %></p>
+        </div>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to new_lesson_path, :class => 'btn-floating btn-large waves-effect wave-light teal lighten-1' do %>
+<i class="material-icons">add</i>
+<% end %>

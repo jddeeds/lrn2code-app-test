@@ -1,0 +1,35 @@
+  <h3>Contact me</h3>
+  <div class="card z-depth-3">
+    <div class="card-content">
+      <p>
+        Want to meet up for drinks? Find me here!
+      </p>
+      <br/>
+      <div id="map"></div>
+    </div>
+  </div>
+<style>
+    #map {
+      width: 100%;
+      height: 400px;
+    }
+</style>
+
+<div id="map"></div>
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 42.045, lng: -87.687},
+      zoom: 13
+    });
+    var marker = new google.maps.Marker({
+    position: {lat: 42.0453469, lng: -87.6824238},
+    map: map,
+    title: 'My favorite bar, Bangers & Lace!'
+  });
+
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwEzfwbpLvyGCX7eV3kFoWYNZTqHUUFxg&callback=initMap"
+async defer></script>

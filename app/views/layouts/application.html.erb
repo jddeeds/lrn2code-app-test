@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lrn2Code</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <!-- materialize icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified Jquery -->
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <style media="screen">
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+            }
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <nav>
+            <div class="nav-wrapper teal">
+                <%= link_to "Lrn2Code", root_path, :class => "brand-logo" %>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="<%=root_path %>">
+                            <i class="material-icons">view_list</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<%= pages_about_path %>">
+                            <i class="material-icons">perm_identity</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<%= pages_contact_path %>">
+                            <i class="material-icons">room</i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href="<%=root_path %>">
+                            <i class="material-icons">view_list</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<%= pages_about_path %>">
+                            <i class="material-icons">perm_identity</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<%= pages_contact_path %>">
+                            <i class="material-icons">room</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col m10 offset-m1">
+                <%= yield %>
+            </div>
+        </div>
+
+        <script>
+            $(".button-collapse").sideNav();
+        </script>
+
+    </body>
+</html>
