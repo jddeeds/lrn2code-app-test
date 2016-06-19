@@ -13,9 +13,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
         <!-- materialize icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Compiled and minified Jquery -->
-        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-        <style media="screen">
+        <style>
             .videoWrapper {
                 position: relative;
                 padding-bottom: 56.25%;
@@ -34,44 +32,43 @@
         </style>
     </head>
     <body>
-
         <nav>
             <div class="nav-wrapper teal">
-                <%= link_to "Lrn2Code", root_path, :class => "brand-logo" %>
+                <%= link_to "Lrn2Code", root_path, :class => "brand-logo center" %>
                 <a href="#" data-activates="mobile-demo" class="button-collapse">
                     <i class="material-icons">menu</i>
                 </a>
-                <ul class="right hide-on-med-and-down">
+                <ul class="left hide-on-med-and-down">
                     <li>
                         <a href="<%=root_path %>">
-                            <i class="material-icons">view_list</i>
+                            <i class="material-icons left">view_list</i>List
                         </a>
                     </li>
                     <li>
                         <a href="<%= pages_about_path %>">
-                            <i class="material-icons">perm_identity</i>
+                            <i class="material-icons left">perm_identity</i>About
                         </a>
                     </li>
                     <li>
                         <a href="<%= pages_contact_path %>">
-                            <i class="material-icons">room</i>
+                            <i class="material-icons left">room</i>Contact
                         </a>
                     </li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li>
                         <a href="<%=root_path %>">
-                            <i class="material-icons">view_list</i>
+                            <i class="material-icons left">view_list</i>List
                         </a>
                     </li>
                     <li>
                         <a href="<%= pages_about_path %>">
-                            <i class="material-icons">perm_identity</i>
+                            <i class="material-icons left">perm_identity</i>About
                         </a>
                     </li>
                     <li>
                         <a href="<%= pages_contact_path %>">
-                            <i class="material-icons">room</i>
+                            <i class="material-icons left">room</i>Contact
                         </a>
                     </li>
                 </ul>
